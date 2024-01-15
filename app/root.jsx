@@ -15,7 +15,6 @@ import { useEffect, useState } from "react";
 
 export function meta() {
     return [
-        { charset: "UTF-8" },
         { title: "GuitarLA - Remix" },
         { name: "viewport", content: "width=device-width,initial-scale=1" },
     ];
@@ -67,7 +66,6 @@ export default function App() {
     }
 
     const actualizarCantidad = guitarra => {
-        console.log("atcualizando...")
         const carritoActualizado = carrito.map(guitarraState => {
             if (guitarraState.id === guitarra.id) {
                 // Reescribir guitarra
@@ -103,6 +101,11 @@ function Document({ children }) {
     return (
         <html lang="es">
             <head>
+                <meta charSet="utf-8" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                />
                 <Meta />
                 <Links />
             </head>
